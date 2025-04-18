@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="dashboard.html"><img src="assets/Home.svg" alt="home image"></a>
+        <a href="mailto:lhozjan@uniri.hr"><img src="assets/User_fill.svg" alt="email image"></a>
+        <a href="https://www.inf.uniri.hr/" target="_blank"><img src="assets/globe.svg" alt="globe image"></a>
+        <a href="index.html"><img src="assets/Sign_out_squre.svg" alt="sign out image"></a>
+    </nav>
+
+    <div class="content">
+        <h1>Dobrodošli na web aplikaciju!</h1>
+        <div class ="row">
+            <div class="container-table">
+                <div class="title-search">
+                    <h2>Popis studenata</h2>
+                    <div class="search">
+                        <p>Pretraži:</p>
+                        <input type="text" id="search-input" onkeyup="searchTable()" placeholder="Unesite ime ili prezime">
+                    </div>
+                </div>
+                <table id="dataTable">
+                    <thread>
+                        <tr>
+                            <th>Ime</th>
+                            <th>Prezime</th>
+                            <th>Akcije</th>
+                        </tr>
+                    </thread>
+                    <tbody>
+                        <!--ovdje ce se dinamicki generirati redovi tablice-->
+                    </tbody>
+                </table>
+            </div>
+            <div class="container-head">
+                <h2>Dodaj novog studena</h2>
+                <form id="inputForm">
+                    <label for="firstName">Ime:</label>
+                    <input type="text" id="firstName" name="firstName">
+                    <label for="lastname">Prezime:</label>
+                    <input type="text" id="lastname" name="lastname">
+                    <button type="button" onclick="addEntry()">Dodaj</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+
+</body>
+</html>
